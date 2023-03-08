@@ -20,8 +20,12 @@
               Services
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Haircut woman - 150</a></li>
-              <li><a class="dropdown-item" href="#">Haircut man - 100</a></li>
+              <li><a class="dropdown-item" href="/salon_appointment/service.php">Haircut woman - 150</a></li>
+              <li>
+                <button type="button" class="dropdown-item btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Launch demo modal</button>
+              </li>
+              <li><a class="dropdown-item" href="/salon_appointment/service.php">Haircut man - 100</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
