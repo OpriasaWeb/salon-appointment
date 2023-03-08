@@ -16,3 +16,4 @@ Otherwise, users can click the service <br />
                 if all the hours is disabled then users may go back to home <br />
             if booking date and hour successful <br />
             the system shall email the customer for their booking 30 minutes before the exact date and hour <br />
+# Salon Appointment System
