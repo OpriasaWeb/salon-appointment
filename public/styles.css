@@ -1,0 +1,26 @@
+
+
+
+
+/* --------------------------------------------------- */
+/* Service PHP */
+/* .service{
+    border: 1px solid black;
+}
+
+.service .container{
+    border: 1px solid black;
+} */
+
+.service .container .card{
+    margin: 2rem auto;
+}
+
+.service .container .card button{
+    /* border: 1px solid black; */
+    float: right;
+    margin-top: 1rem;
+}
+
+/* Service PHP */
+/* --------------------------------------------------- */
