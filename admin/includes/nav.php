@@ -1,6 +1,6 @@
-<nav class="navbar bg-body-tertiary fixed-top">
+<nav class="navbar bg-body-tertiary fixed-top mb-5">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Salon Appointment</a>
+    <a class="navbar-brand" href="#">Salon Appointment - ADMIN</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <!-- <span class="navbar-toggler-icon"></span> -->
       <i class="fa-solid fa-list p-2"></i>
@@ -13,16 +13,16 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="./dashboard.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Manage services</a>
+            <a class="nav-link" href="./services.php">Manage services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Customers</a>
+            <a class="nav-link" href="./customers.php">Customers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Appointments</a>
+            <a class="nav-link" href="./appointments.php">Appointments</a>
           </li>
           <form action="./code.php" class="d-bottom" method="POST">
             <li class="nav-item">
