@@ -19,23 +19,32 @@ require_once '../connect/db_connect.php';
         <?php 
         endif; 
         ?>
-        <form action="" method="post">
-
-        </form>
-        <form class="row g-3" action="" method="post" id="login_form">
-            <p class="fs-2">Admin login - Salon Appointment</p>
-            <div class="col-md-4">
-                <label for="validationDefault01" class="form-label">Email</label>
-                <input type="text" class="form-control" name="email" id="validationDefault01" value="" required>
+        <div class="card mt-5">
+            <div class="card-header p-3">
+                <p class="fs-2">Salon appointment - admin login</p>
+                <!-- Message alert -->
+                <?php    
+                    include './message.php';
+                ?>
+                <!-- Message alert -->
             </div>
-            <div class="col-md-4">
-                <label for="validationDefault02" class="form-label">Password</label>
-                <input type="password" class="form-control" name="password" id="validationDefault02" value="" required>
+            <div class="card-body center">
+                <form class="row g-3" action="./code.php" method="POST" id="login_form">
+                    
+                    <div class="col-md-6">
+                        <label for="validationDefault01" class="form-label"><i class="fa-solid fa-circle-user"></i> Email</label>
+                        <input type="email" class="form-control" name="admin_email" id="validationDefault01" value="" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationDefault02" class="form-label"><i class="fa-solid fa-lock"></i> Password</label>
+                        <input type="password" class="form-control" name="admin_password" id="validationDefault02" value="" required>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary float-end" type="submit" name="admin_login" value="admin_login" id="admin_login_button">Login</button>
+                    </div>
+                </form>
             </div>
-            <div class="col-12">
-                <button class="btn btn-primary" type="submit" name="admin_login" value="login" id="admin_login_button">Login</button>
-            </div>
-        </form>
+        </div>
     </div>
 
 
