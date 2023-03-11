@@ -1,17 +1,11 @@
 <?php
 
-$host = 'localhost';
-$user = 'root';
-$password = '';
-$dbname = 'salon_appointment';
+// Database connection
+$conn = mysqli_connect("localhost", "root", "", "salon_appointment");
 
-$dsn = 'mysql:host='. $host .';dbname='. $dbname;
+// If the connection to database failed, print the error
+if(!$conn){
+  die("Connection failed." . mysqli_connect_errno());
+}
 
-// Create PDO instance
-$pdo = new PDO($dsn, $user, $password);
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-
-// mysqli instance
-$db = mysqli_connect($host,$user,$password,$dbname);
 ?>
