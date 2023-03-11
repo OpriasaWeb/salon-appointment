@@ -7,8 +7,6 @@ echo "Dashboard";
 
 ?>
 
-
-
   <!-- Header includes -->
   <?php
     include 'includes/header.php';

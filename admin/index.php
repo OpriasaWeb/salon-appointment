@@ -3,8 +3,6 @@ session_start();
 
 // Database connection - PDO
 require_once '../connect/db_connect.php';
-
-
 ?>
     
     
