@@ -17,3 +17,12 @@ Otherwise, users can click the service <br />
             if booking date and hour successful <br />
             the system shall email the customer for their booking 30 minutes before the exact date and hour <br />
 # Salon Appointment System
+
+
+Find a new way - 
+    enter phone number <br />
+        mysqli_num_rows = 0 meaning empty or mysqli search if there is <br />
+            if non-exist, put it to the new customer tab <br />
+            if exist, redirect it to appointment with get info api so that the data of that specific phone number will be automatically entered in the basic info <br />
+            
+            Do the mysqli condition to get the right answer
