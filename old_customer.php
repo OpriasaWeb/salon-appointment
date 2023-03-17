@@ -28,13 +28,34 @@ require './connect/db_connect.php';
           
           <!-- Get the id of the phone user -->
           <div class="mb-3">
-            <input type="hidden" class="form-control" name="customer_id" id="">
+
+            <!-- ID of customer -->
+            <?php
+
+              $phone_get = $_GET['phone_appointment'];
+
+              $query_get = "SELECT customer_id FROM salon_customer WHERE phone = '$phone_get' ";
+
+              $query_run = mysqli_query($conn, $query_get);
+
+              if(mysqli_num_rows($query_run) > 0){
+                while($id_customer = mysqli_fetch_array($query_run)){
+            ?>
+            <!-- ID of customer -->
+
+            <input type="text" class="form-control" name="customer_id" value="<?php echo $id_customer['customer_id'] ?>">
+
+            <?php
+                }
+              }
+            ?>
+
           </div>
           <!-- ------------------------------------------------ -->
           <!-- SERVICES -->
           <div class="mb-3">
             <label for="" class="form-label">Services</label>
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select" name="service" aria-label="Default select example">
             <option selected>Choose service</option>
 
             <?php
@@ -51,21 +72,21 @@ require './connect/db_connect.php';
             ?>
               <option value="<?php echo $services['services_id'] ?>"><?php echo $services['service_name'] ?> - <?php echo $services['price'] ?></option>
             
-          <?php
+            <?php
+                }
               }
-            }
-          ?>
+            ?>
             </select>
           </div>
           <!-- SERVICES -->
           <!-- ------------------------------------------------ -->
           <div class="mb-3">
             <label for="" class="form-label">Date of appointment</label>
-            <input type="date" class="form-control" name="phone_number" id="">
+            <input type="date" class="form-control" name="date_appointment" id="">
           </div>
           <div class="mb-3">
             <label for="" class="form-label">Time of appointment</label>
-            <input type="time" class="form-control" name="phone_number" id="">
+            <input type="time" class="form-control" name="time_appointment" id="">
           </div>
           <a href="./index.php" class="btn btn-info">Back</a>
           <button class="btn btn-primary float-end" name="book_appointment" type="submit">Book</button>
