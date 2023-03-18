@@ -72,9 +72,7 @@ require '../connect/db_connect.php';
                 <button type="submit" name="delete_service" value="<?= $services['services_id'] ?>" class="btn btn-sm btn-danger">Delete</button>
               </form>
             </td>
-
           </tr>
-
           <?php
               }
             } else{
