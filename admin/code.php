@@ -104,7 +104,7 @@ if(isset($_POST['update_service'])){
 // Delete the service
 if(isset($_POST['delete_service'])){
 
-  $service_id = mysqli_real_escape_string($conn, $_POST['service_id']);
+  $service_id = mysqli_real_escape_string($conn, $_POST['delete_service']);
 
   $query_delete = "DELETE FROM salon_services WHERE services_id = '$service_id' ";
 
@@ -118,13 +118,66 @@ if(isset($_POST['delete_service'])){
     
     // otherwise, print the failed delete
   } else{
-      $_SESSION['message'] = "Delete the service failed.";
+      $_SESSION['message'] = "Deleting the service failed.";
       header("Location: services.php");
       exit(0);
   }
-
 }
 // Delete the service
+
+// Update customer account
+if(isset($_POST['update_customer'])){
+
+  $customer_id = mysqli_real_escape_string($conn, $_POST['customer_id']);
+
+  $c_fullname = mysqli_real_escape_string($conn, $_POST['c_fullname']);
+  $c_phone = mysqli_real_escape_string($conn, $_POST['c_phone']);
+  $c_email = mysqli_real_escape_string($conn, $_POST['c_email']);
+
+  $update_query = "UPDATE salon_customer SET fullname = '$c_fullname', phone = '$c_phone', email = '$c_email' WHERE customer_id = '$customer_id' ";
+
+  $update_run = mysqli_query($conn, $update_query);
+
+  if($update_run){
+    $_SESSION['message'] = "Customer account update successfully!";
+    header("Location: customers.php");
+    exit(0);
+  } else{
+    $_SESSION['message'] = "Updating customer account failed.";
+    header("Location: update_customer.php");
+    exit(0);
+  }
+
+  
+
+}
+
+// Update customer account
+
+// Delete the customer account
+if(isset($_POST['delete_customer'])){
+
+  $customer_id = mysqli_real_escape_string($conn, $_POST['customer_id']);
+
+  $customer_del = "DELETE FROM salon_customer WHERE customer_id = '$customer_id' ";
+
+  $delete_run = mysqli_query($conn, $customer_del);
+
+  // If deleted successfully perform this 
+  if($delete_run){
+    $_SESSION['message'] = "Customer account deleted.";
+    header("Location: customers.php");
+    exit(0);
+    
+    // otherwise, print the failed delete
+  } else{
+    $_SESSION['message'] = "Deleting the customer failed.";
+    header("Location: customers.php");
+    exit(0);
+  }
+
+}
+// Delete the customer account
 
 
 
