@@ -75,13 +75,14 @@ if(isset($_POST['add_service'])){
 
 // Update the service
 if(isset($_POST['update_service'])){
+
   $service_id = mysqli_real_escape_string($conn, $_POST['service_id']);
   $service_name = mysqli_real_escape_string($conn, $_POST['service_name']);
   $service_price = mysqli_real_escape_string($conn, $_POST['service_price']);
   $availability = mysqli_real_escape_string($conn, $_POST['availability']);
 
   $query_update = "UPDATE salon_services 
-                  SET service_name = '$service_name', availability = '$service_price', price = '$availability' 
+                  SET service_name = '$service_name', availability = '$availability', price = '$service_price' 
                   WHERE services_id = '$service_id' ";
 
   $query_run_update = mysqli_query($conn, $query_update);
