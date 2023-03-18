@@ -125,6 +125,8 @@ if(isset($_POST['delete_service'])){
 }
 // Delete the service
 
+// --------------------------------------------------------------- //
+
 // Update customer account
 if(isset($_POST['update_customer'])){
 
@@ -147,17 +149,13 @@ if(isset($_POST['update_customer'])){
     header("Location: update_customer.php");
     exit(0);
   }
-
-  
-
 }
-
 // Update customer account
 
 // Delete the customer account
 if(isset($_POST['delete_customer'])){
 
-  $customer_id = mysqli_real_escape_string($conn, $_POST['customer_id']);
+  $customer_id = mysqli_real_escape_string($conn, $_POST['delete_customer']);
 
   $customer_del = "DELETE FROM salon_customer WHERE customer_id = '$customer_id' ";
 
@@ -179,6 +177,37 @@ if(isset($_POST['delete_customer'])){
 }
 // Delete the customer account
 
+// --------------------------------------------------------------- //
+
+// Update appointment
+// Update appointment
+
+// Delete appointment
+
+if(isset($_POST['delete_appointment'])){
+
+  $appointment_id = mysqli_real_escape_string($conn, $_POST['delete_appointment']);
+
+  $appointment_query = "DELETE FROM salon_appointments WHERE appointments_id = '$appointment_id' ";
+
+  $appointment_run = mysqli_query($conn, $appointment_query);
+
+  // If deleted successfully perform this 
+  if($appointment_run){
+    $_SESSION['message'] = "Appointment deleted.";
+    header("Location: appointments.php");
+    exit(0);
+    
+    // otherwise, print the failed delete
+  } else{
+    $_SESSION['message'] = "Deleting appointment failed.";
+    header("Location: appointments.php");
+    exit(0);
+  }
+
+}
+
+// Delete appointment
 
 
 
