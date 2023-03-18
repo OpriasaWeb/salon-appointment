@@ -22,7 +22,8 @@ require '../connect/db_connect.php';
 <div class="container mt-5">
   <div class="card">
     <div class="card-header">
-      <p class="fs-3">Customer registered in salon</p>
+      <p class="fs-3">Services in Beauty Salon</p>
+      <a href="./dashboard.php" class="btn btn-info">Back</a>
       <a href="./add_service.php" class="btn btn-success float-end">Add service</a>
     </div>
     <div class="card-body">
