@@ -40,8 +40,8 @@ require '../connect/db_connect.php';
             <div class="mb-3">
               <label for="">Availability</label>
               <select class="form-select form-select-sm mb-3" name="availability" aria-label=".form-select-sm example">
-                <option value="true" selected>Available</option>
-                <option value="true">Disable</option>
+                <option value="true">Available</option>
+                <option value="false">Disable</option>
               </select>
             </div>
             <div class="mb-3">
