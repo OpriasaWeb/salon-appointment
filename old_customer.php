@@ -43,7 +43,7 @@ require './connect/db_connect.php';
             ?>
             <!-- ID of customer -->
 
-            <input type="text" class="form-control" name="customer_id" value="<?php echo $id_customer['customer_id'] ?>">
+            <input type="hidden" class="form-control" name="customer_id" value="<?php echo $id_customer['customer_id'] ?>">
 
             <?php
                 }
@@ -82,11 +82,13 @@ require './connect/db_connect.php';
           <!-- ------------------------------------------------ -->
           <div class="mb-3">
             <label for="" class="form-label">Date of appointment</label>
-            <input type="date" class="form-control" name="date_appointment" id="">
+            <input type="date" class="form-control" name="date_appointment" id="date_input" required>
           </div>
           <div class="mb-3">
-            <label for="" class="form-label">Time of appointment</label>
-            <input type="time" class="form-control" name="time_appointment" id="">
+            <!-- Opening hours 9:00am and closing time is 6:00pm -->
+            <label for="" class="form-label" >Time of appointment (9:00am to 6:00pm)</label>
+            <input type="time" min="09:00" max="18:00" value="09:00" class="form-control" name="time_appointment" id="appt-time" required> 
+            <span class="validity"></span>
           </div>
           <a href="./index.php" class="btn btn-info">Back</a>
           <button class="btn btn-primary float-end" name="book_appointment" type="submit">Book</button>
