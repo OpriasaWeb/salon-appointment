@@ -45,13 +45,11 @@ require '../connect/db_connect.php';
                 $service = mysqli_fetch_array($update_run);
                 // print_r($service);
 
-              
-          
-          
           ?>
           <!-- Update mysqli code -->
 
           <form action="./code.php" method="POST">
+            <input type="hidden" name="service_id" value="<?= $service['services_id'] ?>" class="form-control">
             <div class="mb-3">
               <label for="">Service name</label>
               <input type="text" name="service_name" value="<?= $service['service_name'] ?>" class="form-control" require>
@@ -63,21 +61,23 @@ require '../connect/db_connect.php';
             <div class="mb-3">
               <label for="">Availability</label>
               <select class="form-select form-select-sm mb-3" name="availability" aria-label=".form-select-sm example">
-                <option value="
-                <?php
+                <option value="<?php echo $service['availability'] ?>">
+
+                <?php 
                   if($service['availability'] == 'true'){
-                ?>
-                    <option value="true" selected>Available</option>
+                    echo 'Available';
+                  ?>
+                  <option value="false">Disable</option>
                 <?php
                   } else{
-                    ?>
-                    <option value="false" selected>Disable</option>
+                    echo "Disable";
+                  ?>
+                  <option value="true">Available</option>
                   <?php
                   }
-                
-
                 ?>
-                "></option>
+                </option>
+                
               </select>
             </div>
             <div class="mb-3">
