@@ -2,7 +2,6 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Salon Appointment</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-      <!-- <span class="navbar-toggler-icon"></span> -->
       <i class="fa-solid fa-list p-2"></i>
     </button>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -19,10 +18,10 @@
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Book appointment</button>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">History</a>
+            <a class="nav-link" href="#history">History</a>
           </li>
         </ul>
       </div>
