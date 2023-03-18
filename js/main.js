@@ -20,6 +20,10 @@ dateInput.addEventListener("change", () => {
     // dateInput.disabled = true;
     alert("Sorry, you cannot book past dates.");
     dateInput.value = formattedCurrentDate;
-  }
+  } 
+  // else if(formattedSelectedDate > formattedCurrentDate){
+  //   alert("Sorry, you cannot book day after tomorrow dates.");
+  //   dateInput.value = formattedCurrentDate + 1;
+  // }
 })
 // DATE controls
