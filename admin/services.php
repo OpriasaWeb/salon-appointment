@@ -29,9 +29,9 @@ require '../connect/db_connect.php';
     <div class="card-body">
 
       <!-- Message alert -->
-      <?php
+      <!-- <?php
         include './message.php';
-      ?>
+      ?> -->
       <!-- Message alert -->
 
       <table class="table table-bordered table-hover">
@@ -69,7 +69,7 @@ require '../connect/db_connect.php';
             <td class="text-center">
               <a href="./update_service.php?service_id=<?php echo $services['services_id']; ?>" class="btn btn-sm btn-primary">Update</a>
               <form action="./code.php" method="POST" class="d-inline">
-                <button type="submit" name="delete_service" class="btn btn-sm btn-danger">Delete</button>
+                <button type="submit" name="delete_service" value="<?= $services['services_id'] ?>" class="btn btn-sm btn-danger">Delete</button>
               </form>
             </td>
 
