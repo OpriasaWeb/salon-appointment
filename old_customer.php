@@ -60,7 +60,7 @@ require './connect/db_connect.php';
 
             <?php
               // SQL query to get all from salon services data
-              $services_query = "SELECT * FROM salon_services";
+              $services_query = "SELECT * FROM salon_services WHERE availability = 'true' ";
 
               // Run the query using mysqli_query
               $services_run = mysqli_query($conn, $services_query);
