@@ -62,3 +62,13 @@ input + span {
     padding-left: 5px;
 }
 /* TIME controls */
+
+
+/* INDEX - BANNER */
+#mid-book{
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 50vh; /* Set the height to the viewport height */
+}
+/* INDEX - BANNER */
