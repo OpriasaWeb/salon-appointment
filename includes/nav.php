@@ -15,9 +15,6 @@
             <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Book appointment</button>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
           </li>
           <li class="nav-item">
