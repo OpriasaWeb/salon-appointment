@@ -59,21 +59,34 @@ if(isset($_GET['enter_phone'])){
 
     <?php
     echo "<br>";
-    echo "<br>";
-    echo "<br>";
+
     ?>
 
     <!-- Message session -->
     <!-- <?php require_once './message.php' ?> -->
 
     <!-- FRONT BANNER -->
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
             <div class="col-md-6 m-auto">
                 <img src="./images/salon1.png" class="img-fluid" alt="">
             </div>
         </div>
-    </div>
+    </div> -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./images/banner3.jpg" class="d-block w-100 img-fluid" alt="...">
+                <div class="carousel-caption" id="mid-book">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Book now!</button>
+                </div>
+            </div>
+        </div>
     <!-- FRONT BANNER -->
 
     <hr class="mt-2">
