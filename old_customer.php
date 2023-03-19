@@ -17,7 +17,7 @@ require './connect/db_connect.php';
     <div class="row">
       <div class="col-md-6 mt-5">
         <p class="fs-3">Appointment booking</p>
-        <p class="fs-5">Hello, Jeremy!</p>
+        
         <form action="./code.php" method="POST">
 
           <!-- Debugging - code later -->
@@ -34,13 +34,15 @@ require './connect/db_connect.php';
 
               $phone_get = $_GET['phone_appointment'];
 
-              $query_get = "SELECT customer_id FROM salon_customer WHERE phone = '$phone_get' ";
+              $query_get = "SELECT customer_id, fullname FROM salon_customer WHERE phone = '$phone_get' ";
 
               $query_run = mysqli_query($conn, $query_get);
 
               if(mysqli_num_rows($query_run) > 0){
                 while($id_customer = mysqli_fetch_array($query_run)){
             ?>
+
+            <p class="fs-5">Welcome, <?php echo $id_customer['fullname'] ?>!</p>
             <!-- ID of customer -->
 
             <input type="hidden" class="form-control" name="customer_id" value="<?php echo $id_customer['customer_id'] ?>">
@@ -53,6 +55,7 @@ require './connect/db_connect.php';
           </div>
           <!-- ------------------------------------------------ -->
           <!-- SERVICES -->
+          
           <div class="mb-3">
             <label for="" class="form-label">Services</label>
             <select class="form-select" name="service" aria-label="Default select example">
